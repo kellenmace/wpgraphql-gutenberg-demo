@@ -1,7 +1,4 @@
 import { gql } from "@apollo/client";
-import "@wordpress/block-library/build-style/common.css";
-import "@wordpress/block-library/build-style/style.css";
-import "@wordpress/block-library/build-style/theme.css";
 import { client } from "../lib/apolloClient";
 import Layout from "../components/Layout";
 import Block, { BLOCKS_FIELD } from "../components/Block";
