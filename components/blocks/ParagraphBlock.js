@@ -1,5 +1,5 @@
-import React from "react";
 import { gql } from "@apollo/client";
+import parseHtml from "../../lib/parser";
 
 export const PARAGRAPH_BLOCK_ATTRIBUTES = gql`
   fragment ParagraphBlockAttributes on CoreParagraphBlockAttributes {
@@ -32,10 +32,5 @@ export default function ParagraphBlock({
   style,
   textColor,
 }) {
-  return (
-    <p
-      className={getClassName(align)}
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
-  );
+  return <p className={getClassName(align)}>{parseHtml(content)}</p>;
 }
