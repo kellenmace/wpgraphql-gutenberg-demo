@@ -24,6 +24,7 @@ function getClassName(textAlign) {
 }
 
 export default function HeadingBlock({
+  align,
   anchor,
   backgroundColor,
   className,
